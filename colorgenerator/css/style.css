@@ -15,6 +15,7 @@ h1 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight:700;
 	padding: 0 40px;
+	float: left;
 }
 header {
 		background-color: #5FCEC0;
@@ -23,8 +24,20 @@ header {
 		background-image: url('../img/wheel-icon.png');
 		background-repeat: no-repeat;
 		background-size: 70px;
-		background-position: 15px
+		background-position: 15px;
+		height: 80px;
 	}
+
+header a{
+	float: left;
+	line-height: 80px;
+	color: #fff;
+}
+
+.clear{
+	clear: both;
+}
+
 #tools {
 		border: 1px #ccc;
 		border-style: solid;
