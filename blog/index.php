@@ -235,7 +235,7 @@ if(DEBUG)					echo "<p class='debug'>Line <b>" . __LINE__ . "</b>: categoryToSho
 				/************************************************/
 				/******* Blogbeiträge aus DB auslesen  **********/
 				/************************************************/
-				$sql = "SELECT * FROM blogs
+				$sql = "SELECT * FROM blogs 
 											INNER JOIN users USING(usr_id)
 											INNER JOIN categories USING(cat_id)
 											";
@@ -260,6 +260,8 @@ if(DEBUG)				echo "<p class='debug ok'>Line <b>" . __LINE__ . "</b>: Kategorie e
 
 					}
 				}
+				
+				$sql .= " ORDER BY blog_id DESC";
 
 				// 2. DB: SQL-Statement Vorbereiten
 				$statement = $pdo->prepare($sql);
@@ -295,7 +297,6 @@ if(DEBUG)				echo "<p class='debug ok'>Line <b>" . __LINE__ . "</b>: Kategorie e
 
 	<body>
 		<header>
-			<a href="https://github.com/hedera-s/learn_blog" class="git"><i class="fab fa-github"></i> GitHub Repository</a>
 			<?php if(isset($_SESSION['usr_id'])):?>
 				<div class="hello">	
 					<p>Hallo, <?=$_SESSION['usr_firstname']?>!  |  <a href="?action=logout">Logout</a></p>

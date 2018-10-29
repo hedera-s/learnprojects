@@ -374,6 +374,7 @@ if(DEBUG)				echo "<p class='debug hint'>Line <b>" . __LINE__ . "</b>: Logout wi
 			</div>
 		</header>
 		<br>
+		<div class="wrapper-dashboard">
 		<div class="blog-headline">
 			<h1>Blog über Essen - Dashboard</h1>
 			
@@ -418,7 +419,7 @@ if(DEBUG)				echo "<p class='debug hint'>Line <b>" . __LINE__ . "</b>: Logout wi
 				<input type="submit" value="Kategorie anlegen" class="button">
 			</form>
 		</aside><br>
-		
+		</div>
 		<footer class="clear">
 			<p>Copyright Irina Serdiuk</p>
 		</footer>		
